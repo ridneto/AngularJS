@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app>
+    <head>
+		<meta charset="utf-8"/>
+		<title>AngularJS</title>
+		<script src="angular.min.js"></script>
+	</head>
+	<body>
+
+			Digite seu nome: <input type="text" placeholder="Nome"
+							ng-model="nome">
+
+			<div ng-show="nome">
+				Olá, {{nome}}!
+			</div>
+
+	</body>
+</html>
