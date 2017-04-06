@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app>
+    <head>
+		<meta charset="utf-8"/>
+		<title>AngularJS</title>
+		<script src="angular.min.js"></script>
+	</head>
+	<body>
+            Olá, mundo! 5 + 8 = {{5 + 8}}
+
+			<div ng-init="
+				mensagem='Olá Mundo!';
+				resposta_do_universo=42;
+				pessoa={nome: 'Neto', sobreNome: 'Moraes', idade: 20}
+				">
+				Expressões matemáticas: {{10}}					</br>
+				Two-way binding: {{mensagem}}					<br/>
+				Single-time binding: {{::resposta_do_universo}}	<br/>
+				Obj: {{pessoa.nome}}							<br/><br/>
+			</div>
+
+			{{"upercase" | uppercase}} </br>
+			{{"LOWERca4E" | lowercase}}	</br>
+			{{123456789 | number}}		<br/>
+			{{[1,8,2,4,7,5] | limitTo: 4}}	</br>
+			{{['Joh', 'Maria', 'Jose'] | filter: 'j'}} </br></br>
+
+			Digite seu nome: <input placeholder="Nome"
+							ng-model="nome">
+
+			<div ng-show="nome">
+				Olá, {{nome}}!
+			</div>
+
+			<style>
+				.verde{
+				color:green;
+				}
+				.vermelho{
+				color:red;
+				}
+				.negrito{
+				color:black;
+				}
+			</style>
+
+
+			</br></br>
+			<div ng-init="
+				click=false;
+				">
+
+				<span ng-class="{
+					'vermelho': click,
+					'verde': !click
+					}" >
+
+					<a ng-click="click = !click">
+					[<span ng-show="click">X</span>]
+
+					<span class="negrito">
+            <span ng-show="!click">Não</span> Click</span>
+					</a>
+				</span>
+
+			</br></br>
+			</div>
+
+
+			</div>
+
+	</body>
+</html>
